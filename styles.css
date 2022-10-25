@@ -1,0 +1,379 @@
+@font-face {
+    font-family: 'Montserrat-Bold';
+    src: url(fonts/Montserrat-Bold.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat-Light';
+    src: url(fonts/Montserrat-Light.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat-Thin';
+    src: url(fonts/Montserrat-Thin.ttf);
+}
+
+@font-face {
+    font-family: 'Montserrat-ThinItalic';
+    src: url(fonts/Montserrat-ThinItalic.ttf);
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: linear-gradient(to bottom, #717171, #7e7e8a, #868da4, #899dc0, #86aedb, #70bfee, #4dd1fa, #00e2ff, #00f2e5, #4afdb3, #a8ff76, #fefa3b);
+}
+
+nav {
+    width: 100%;
+    height: 0.5%;
+}
+
+.enlace {
+    position: absolute;
+    padding: 3px 0 0 10px;
+}
+
+.logo {
+    height: 100px;
+    width: auto;
+    padding: 5px;
+    margin-left: 30px;
+}
+
+nav ul {
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 100px;
+    margin: 0 5px;
+
+}
+
+nav ul li a {
+    color: #75c7ff;
+    font-size: 15px;
+    padding: 7px 13px;
+    font-family: 'Montserrat-Light';
+    font-weight: 400;
+    letter-spacing: 1px;
+    border-radius: 3px;
+    text-transform: uppercase;
+    text-decoration: none;
+    list-style: none;
+}
+
+li a:active, li a:hover {
+    background: #fefa3b;
+    transition: 0.5s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: white;
+    float: right;
+    line-height: 100px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+.inicio {
+    width: 100%;
+    margin-top: 50px;
+    max-width: 1450px;
+    height: 100vh;
+    padding: 0 40px 40px 40px;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 80%;
+    position: relative;
+    box-shadow: 1px 1px 8px 8px rgba(0,0,0,0.61);
+    -webkit-box-shadow: 1px 1px 8px 8px rgba(0,0,0,0.61);
+    -moz-box-shadow: 1px 1px 8px 8px rgba(0,0,0,0.61);
+}
+.mySlides{
+    display: none;
+}
+.mySlides img{
+    width: 100%;
+}
+
+.prev,
+.next{
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: #75c7ff;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6 ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    border:  solid #75c7ff 2px;
+}
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+.prev:hover,
+.next:hover{
+    background-color: rgba(0, 0, 0, 0.8);
+}
+.elements{
+    text-align: center;
+}
+.quadrate{
+    cursor: pointer;
+    height: 4px;
+    width: 50px;
+    margin: 0 2px;
+    background-color: #717171;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+    border-radius: 2px;
+}
+.active, .quadrate:hover{
+    background-color: #fff;
+}
+@media screen and (max-width:900px) {
+    .container{
+        width: 100%;
+    }
+}
+@media screen and (max-width:500px) {
+    .container{
+        width: 100%;
+    }
+    .prev,
+    .next{
+        padding: 5px;
+    }
+}
+
+.principal {
+    width: 100%;
+    height: 100vh;
+    font-family: 'Montserrat-Light';
+    font-weight: 400;
+    color: black;
+    letter-spacing: 0.03em;
+    line-height: 1.6;
+    margin-top: -30px;
+}
+
+.contenedorPlanes {
+    width: 100%;
+    max-width: 1400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin: auto;
+}
+
+
+.planUno {
+    width: 310px;
+    height: 430px;
+    padding: 0 0 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 17px;
+    text-align: center;
+    transition: all 0.25s;
+    background: white;
+    background-size: cover;
+}
+
+.imgPlanes {
+    height: 8em;
+    width: 300px;
+    margin-top: 5px;
+    z-index: -10;
+}
+
+.txtPlanes {
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    z-index: 5;
+    margin-top: -90px;
+    color: black;
+}
+
+.planUno:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.planUno ul {
+    margin-top: 4rem;
+}
+
+.planUno li {
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    list-style: none;
+}
+
+input.botonplanUno{
+    background: linear-gradient(to right,#949595 ,#393939);
+    background-color: #949595;
+    color: #fff;
+    font-family: 'Montserrat-Bold';
+    font-size: 18px;
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 14px 15px;
+    margin-bottom: -20px;
+    border: 0px solid #000;
+    border-radius: 10px;
+    display: inline-block;
+   }
+input.botonplanUno:hover{
+    background: linear-gradient(to right,#a2a3a3 ,#616161);
+    background-color: #a2a3a3;
+   }
+   
+input.botonplanUno:active{
+    transform: scale(0.95);
+   }
+
+.antesSub {
+    text-decoration: line-through;
+}
+
+
+.planDos {
+    width: 310px;
+    height: 430px;
+    padding: 0 0 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 17px;
+    text-align: center;
+    transition: all 0.25s;
+    background: white;
+    background-size: cover;
+}
+
+.planDos:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+h2 {
+    font-family: 'Montserrat-Bold';
+}
+
+.planDos ul {
+    margin-top: 4rem;
+}
+
+.planDos li {
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    list-style: none;
+}
+
+input.botonplanDos{
+    background: linear-gradient(to right,#e1eb80 ,#ebe024);
+    background-color: #e1eb80;
+    color: #fff;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 14px 15px;
+    border: 0px solid #000;
+    border-radius: 10px;
+    display: inline-block;
+   }
+input.botonplanDos:hover{
+    background: linear-gradient(to right,#e4ed92 ,#ede358);
+    background-color: #e4ed92;
+   }
+input.botonplanDos:active{
+    transform: scale(0.95);
+   }
+
+.planTres {
+    width: 310px;
+    height: 430px;
+    padding: 0 0 15px 0;
+    border-radius: 8px;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    margin: 17px;
+    text-align: center;
+    transition: all 0.25s;
+    background:white;
+    background-size: cover;
+}
+
+.planTres:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+}
+
+.planTres ul {
+    margin-top: 4rem;
+}
+
+.planTres li {
+    padding: 0 1rem;
+    font-size: 1.1rem;
+    text-decoration: none;
+    list-style: none;
+}
+
+input.botonplanTres{
+    background: linear-gradient(to right,#93bfef ,#187bd5);
+    background-color: #93bfef;
+    color: #fff;
+    font-family: Arial;
+    font-size: 18px;
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 14px 15px;
+    border: 0px solid #000;
+    border-radius: 10px;
+    display: inline-block;
+   }
+input.botonplanTres:hover{
+    background: linear-gradient(to right,#a1c6f1 ,#548eda);
+    background-color: #a1c6f1;
+   }
+input.botonplanTres:active{
+    transform: scale(0.95);
+   }
