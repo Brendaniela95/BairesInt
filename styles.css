@@ -93,6 +93,8 @@ li a:hover {
 .abrirMenu,
 .cerrarMenu {
     display: none;
+
+
 }
 
 @media screen and (max-width: 950px) {
@@ -105,7 +107,6 @@ li a:hover {
         align-items: center;
         background: rgb(251,251,251);
         background: linear-gradient(0deg, rgba(251,251,251,1) 0%, rgba(45,180,253,1) 100%); 
-        height: 100%;
         overflow-y: auto;
         opacity: 0;
         pointer-events: none;
@@ -136,11 +137,15 @@ li a:hover {
         border: none;
         background: none;
         cursor: pointer;
+        position:fixed;
+        right: 40px;
+
     }
 
     .abrirMenu {
         padding: 20px 15px;
         margin-right: 20px;
+
     }
 
     .cerrarMenu {
@@ -160,22 +165,53 @@ li a:hover {
         opacity: 1;
         pointer-events: all;
     }
+    .inicio {
+        width: 100%;
+        margin-top: 100px;
+        /* max-width: 1450px; */
+        height: 60vh;
+        padding: 0 40px 40px 40px;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+
 }
 
 /* Header */
+@media screen and (min-width:950px) {
+    .inicio{
+        width: 100%;
+        /* margin-top: 50px; */
+        /* max-width: 1450px; */
+        height: 100vh;
+        padding: 0 40px 40px 40px;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}
+
 
 .inicio {
     width: 100%;
-    margin-top: 50px;
-    max-width: 1450px;
-    height: 100vh;
+    /* margin-top: 50px; */
+    /* max-width: 1450px;
+    height: 100vh; */
     padding: 0 40px 40px 40px;
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
 }
 
 /* Contenedor - slide */
@@ -247,18 +283,24 @@ li a:hover {
 @media screen and (max-width:950px) {
     .container{
         width: 100%;
-        margin-top: -700px;
+        height: 100px;
+        /* margin-top: -700px; */
         z-index: -100;
     }
 }
 @media screen and (max-width:500px) {
     .container{
         width: 100%;
-        margin-top: -700px;
+        height: 100px;
+        margin: 0;
     }
     .prev,
     .next{
         padding: 5px;
+    }
+    
+    .inicio{
+        height: 400px;
     }
 }
 
@@ -266,7 +308,7 @@ li a:hover {
 
 .principal {
     width: 100%;
-    height: 100vh;
+    /* height: 100vh; */
     font-family: 'Montserrat-Light';
     font-weight: 400;
     color: black;
@@ -279,7 +321,7 @@ li a:hover {
 
 .contenedorPlanes {
     width: 100%;
-    max-width: 1400px;
+    /* max-width: 1400px; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -450,8 +492,11 @@ input.botonplanTres:active{
         flex-direction: column;
         justify-content: center;
         align-content: center;
-        margin-top: -650px;
+        /* margin-top: -650px; */
         margin-left: 100px;
+        margin:0;
+        align-items: center;
+
     }
     
     /* Formato de presentacion de planes */

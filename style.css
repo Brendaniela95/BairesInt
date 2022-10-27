@@ -247,6 +247,11 @@ input.btnbutton{
     font-size: 18px;
 }
 
+.about {
+    width: 90%;
+    margin-top: 50px;
+}
+
 @media screen and (min-width: 1024px){
     /* menu */
 
