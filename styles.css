@@ -18,46 +18,59 @@
     src: url(fonts/Montserrat-ThinItalic.ttf);
 }
 
-*{
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
+/* Fondo de nuestra web */
+
 body {
     background-image: linear-gradient(to bottom, #717171, #7e7e8a, #868da4, #899dc0, #86aedb, #70bfee, #4dd1fa, #00e2ff, #00f2e5, #4afdb3, #a8ff76, #fefa3b);
 }
 
-nav {
+/* Navegador */
+
+.navBar {
+    left: 0;
+    top: 0;
     width: 100%;
-    height: 0.5%;
 }
 
-.enlace {
+.contenedorNav {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.enlaceLogo img {
     position: absolute;
     padding: 3px 0 0 10px;
-}
-
-.logo {
+    display: flex;
+    align-items: center;
     height: 100px;
     width: auto;
-    padding: 5px;
     margin-left: 30px;
+    float: left;
 }
 
-nav ul {
+.menu {
     float: right;
     margin-right: 20px;
 }
 
-nav ul li {
-    display: inline-block;
+.menu li {
     line-height: 100px;
-    margin: 0 5px;
-
+    padding: 0 15px;
+    list-style: none;
+    display: inline-block;
 }
 
-nav ul li a {
+.menu li a {
     color: #75c7ff;
     font-size: 15px;
     padding: 7px 13px;
@@ -67,32 +80,95 @@ nav ul li a {
     border-radius: 3px;
     text-transform: uppercase;
     text-decoration: none;
-    list-style: none;
 }
 
-li a:active, li a:hover {
+li a:active, 
+li a:hover {
     background: #fefa3b;
     transition: 0.5s;
 }
 
-.checkbtn {
-    font-size: 30px;
-    color: white;
-    float: right;
-    line-height: 100px;
-    margin-right: 40px;
-    cursor: pointer;
+/* Menu responsive*/
+
+.abrirMenu,
+.cerrarMenu {
     display: none;
 }
 
-#check {
-    display: none;
+@media screen and (max-width: 950px) {
+    .menu {
+        flex-direction: column;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        align-items: center;
+        background: rgb(251,251,251);
+        background: linear-gradient(0deg, rgba(251,251,251,1) 0%, rgba(45,180,253,1) 100%); 
+        height: 100%;
+        overflow-y: auto;
+        opacity: 0;
+        pointer-events: none;
+        transition: opacity 0.3s;
+        z-index: 10;
+    }
+    
+    .menu li {
+        padding: 0;
+        display: flex;
+
+    }
+    
+    .menu li a {
+        color: black;
+        line-height: 60px;
+    }
+    
+    li a:active, 
+    li a:hover {
+        background: #fefa3b;
+        transition: 0.5s;
+    }
+
+    .abrirMenu,
+    .cerrarMenu {
+        display: block;
+        border: none;
+        background: none;
+        cursor: pointer;
+    }
+
+    .abrirMenu {
+        padding: 20px 15px;
+        margin-right: 20px;
+    }
+
+    .cerrarMenu {
+        padding: 20px 15px;
+    }
+
+    .enlaceLogo img {
+        position: absolute;
+        padding: 3px 0 0 1px;
+        display: flex;
+        height: 60px;
+        width: auto;
+        float: left;
+    }
+
+    .menuAbierto {
+        opacity: 1;
+        pointer-events: all;
+    }
 }
+
+/* Header */
 
 .inicio {
     width: 100%;
     margin-top: 50px;
-    height: 90vh;
+    max-width: 1450px;
+    height: 100vh;
     padding: 0 40px 40px 40px;
     background-attachment: fixed;
     background-repeat: no-repeat;
@@ -101,48 +177,57 @@ li a:active, li a:hover {
     justify-content: center;
     align-items: center;
 }
-.container{
+
+/* Contenedor - slide */
+
+.container {
     width: 80%;
     position: relative;
     box-shadow: 1px 1px 8px 8px rgba(0,0,0,0.61);
     -webkit-box-shadow: 1px 1px 8px 8px rgba(0,0,0,0.61);
     -moz-box-shadow: 1px 1px 8px 8px rgba(0,0,0,0.61);
 }
-.mySlides{
+
+.mySlides {
     display: none;
 }
-.mySlides img{
+
+.mySlides img {
     width: 100%;
 }
 
 .prev,
-.next{
+.next {
     cursor: pointer;
     position: absolute;
     top: 50%;
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: #75c7ff;
+    color: #a1a2a3;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6 ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-    border:  solid #75c7ff 2px;
+    border:  solid #252525 3px;
 }
+
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
+
 .prev:hover,
-.next:hover{
+.next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
-.elements{
+
+.elements {
     text-align: center;
 }
-.quadrate{
+
+.quadrate {
     cursor: pointer;
     height: 4px;
     width: 50px;
@@ -152,20 +237,24 @@ li a:active, li a:hover {
     transition: background-color 0.6s ease;
     border-radius: 2px;
 }
+
 .active, .quadrate:hover{
     background-color: #fff;
 }
-@media screen and (max-width:900px) {
+
+/* Responsive - Slide */
+
+@media screen and (max-width:950px) {
     .container{
         width: 100%;
-    }
-    .none {
-        display: none;
+        margin-top: -700px;
+        z-index: -100;
     }
 }
 @media screen and (max-width:500px) {
     .container{
         width: 100%;
+        margin-top: -700px;
     }
     .prev,
     .next{
@@ -173,32 +262,36 @@ li a:active, li a:hover {
     }
 }
 
+/* Section - Servicios */
+
 .principal {
     width: 100%;
-    height: 100%;
+    height: 100vh;
     font-family: 'Montserrat-Light';
     font-weight: 400;
     color: black;
     letter-spacing: 0.03em;
     line-height: 1.6;
-    margin: 30px 0;
-    
+    margin-top: -30px;
 }
+
+/* Tamaño de los contenedores - cards */
 
 .contenedorPlanes {
     width: 100%;
     max-width: 1400px;
-    height:100%;
     display: flex;
-    flex-wrap: wrap;
     flex-direction: row;
     justify-content: center;
     align-content: center;
     margin: auto;
 }
 
+/* Formato de presentacion de planes */
 
-.planUno {
+.planUno,
+.planDos,
+.planTres {
     width: 310px;
     height: 430px;
     padding: 0 0 15px 0;
@@ -212,6 +305,8 @@ li a:active, li a:hover {
     background-size: cover;
 }
 
+/* Imagenes de los titulos de los planes */
+
 .imgPlanes {
     height: 8em;
     width: 300px;
@@ -219,7 +314,10 @@ li a:active, li a:hover {
     z-index: -10;
 }
 
+/* H2 - Subtitulos de los planes */
+
 .txtPlanes {
+    font-family: 'Montserrat-Bold';
     letter-spacing: 3px;
     text-transform: uppercase;
     z-index: 5;
@@ -227,23 +325,45 @@ li a:active, li a:hover {
     color: black;
 }
 
-.planUno:hover {
+/* Efecto hover de los contenedores */
+
+.planUno:hover,
+.planDos:hover,
+.planTres:hover {
     transform: translateY(-15px);
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
 
-.planUno ul {
+/* Listados */
+
+.planUno ul,
+.planDos ul,
+.planTres ul {
     margin-top: 4rem;
+    margin-bottom: 1.5rem;
 }
 
-.planUno li {
+/* Items de los listados */
+
+.planUno li,
+.planDos li,
+.planTres li {
     padding: 0 1rem;
     font-size: 1.1rem;
     text-decoration: none;
     list-style: none;
 }
 
-input.botonplanUno{
+/* Tachado de precios */
+
+.antesSub {
+    text-decoration: line-through;
+}
+
+
+/* Efectos del boton - Plan uno */
+
+input.botonplanUno {
     background: linear-gradient(to right,#949595 ,#393939);
     background-color: #949595;
     color: #fff;
@@ -258,60 +378,24 @@ input.botonplanUno{
     border: 0px solid #000;
     border-radius: 10px;
     display: inline-block;
-   }
-input.botonplanUno:hover{
+}
+
+input.botonplanUno:hover {
     background: linear-gradient(to right,#a2a3a3 ,#616161);
     background-color: #a2a3a3;
-   }
+}
    
-input.botonplanUno:active{
+input.botonplanUno:active {
     transform: scale(0.95);
-   }
-
-.antesSub {
-    text-decoration: line-through;
 }
 
+/* Efectos del boton - Plan dos */
 
-.planDos {
-    width: 310px;
-    height: 430px;
-    padding: 0 0 15px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    margin: 17px;
-    text-align: center;
-    transition: all 0.25s;
-    background: white;
-    background-size: cover;
-}
-
-.planDos:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-}
-
-h2 {
-    font-family: 'Montserrat-Bold';
-}
-
-.planDos ul {
-    margin-top: 4rem;
-}
-
-.planDos li {
-    padding: 0 1rem;
-    font-size: 1.1rem;
-    text-decoration: none;
-    list-style: none;
-}
-
-input.botonplanDos{
+input.botonplanDos {
     background: linear-gradient(to right,#e1eb80 ,#ebe024);
     background-color: #e1eb80;
     color: #fff;
-    font-family: Arial;
+    font-family: 'Montserrat-Bold';
     font-size: 18px;
     font-weight: 800;
     font-style: normal;
@@ -321,50 +405,24 @@ input.botonplanDos{
     border: 0px solid #000;
     border-radius: 10px;
     display: inline-block;
-   }
-input.botonplanDos:hover{
+}
+
+input.botonplanDos:hover {
     background: linear-gradient(to right,#e4ed92 ,#ede358);
     background-color: #e4ed92;
-   }
-input.botonplanDos:active{
+} 
+
+input.botonplanDos:active {
     transform: scale(0.95);
-   }
-
-.planTres {
-    width: 310px;
-    height: 430px;
-    padding: 0 0 15px 0;
-    border-radius: 8px;
-    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-    overflow: hidden;
-    margin: 17px;
-    text-align: center;
-    transition: all 0.25s;
-    background:white;
-    background-size: cover;
 }
 
-.planTres:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
-}
-
-.planTres ul {
-    margin-top: 4rem;
-}
-
-.planTres li {
-    padding: 0 1rem;
-    font-size: 1.1rem;
-    text-decoration: none;
-    list-style: none;
-}
+/* Efectos del boton - Plan Tres */
 
 input.botonplanTres{
     background: linear-gradient(to right,#93bfef ,#187bd5);
     background-color: #93bfef;
     color: #fff;
-    font-family: Arial;
+    font-family: 'Montserrat-Bold';
     font-size: 18px;
     font-weight: 800;
     font-style: normal;
@@ -374,13 +432,97 @@ input.botonplanTres{
     border: 0px solid #000;
     border-radius: 10px;
     display: inline-block;
-   }
-input.botonplanTres:hover{
+}
+
+input.botonplanTres:hover {
     background: linear-gradient(to right,#a1c6f1 ,#548eda);
     background-color: #a1c6f1;
-   }
+}
+
 input.botonplanTres:active{
     transform: scale(0.95);
-   }
+}
 
+@media screen and (max-width:950px) {
+    .contenedorPlanes {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        margin-top: -650px;
+        margin-left: 100px;
+    }
+    
+    /* Formato de presentacion de planes */
+    
+    .planUno,
+    .planDos,
+    .planTres {
+        width: 250px;
+        max-width: 400px;
+        height: 350px;
+        padding: 0 0 15px 0;
+        border-radius: 8px;
+        box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+        overflow: hidden;
+        justify-content: center;
+        text-align: center;
+        transition: all 0.25s;
+        background: white;
+        background-size: cover;
+    }
+    
+    /* Imagenes de los titulos de los planes */
+    
+    .imgPlanes {
+        height: 5em;
+        width: 95%;
+        margin-top: 5px;
+        z-index: -10;
+    }
+    
+    /* H2 - Subtitulos de los planes */
+    
+    .txtPlanes {
+        font-family: 'Montserrat-Bold';
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        z-index: 5;
+        margin-top: -65px;
+        color: black;
+        font-size: 20px;
+    }
 
+    .planUno ul,
+    .planDos ul,
+    .planTres ul {
+        margin-top: 2.5rem;
+        margin-bottom: 1rem;
+}
+
+    .planUno li,
+    .planDos li,
+    .planTres li {
+        font-size: 1rem;
+        text-decoration: none;
+        list-style: none;
+}
+
+    input.botonplanUno,
+    input.botonplanDos,
+    input.botonplanTres {
+    color: #fff;
+    font-family: 'Montserrat-Bold';
+    font-size: 15px;
+    font-weight: 800;
+    font-style: normal;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 14px 15px;
+    border: 0px solid #000;
+    border-radius: 10px;
+    display: inline-block;
+}
+    
+}
