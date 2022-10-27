@@ -9,20 +9,24 @@
     <title>BairesInt </title>
 </head>
 <body>
-    <nav >
-        <input type="checkbox" name="" id="check">
-        <label for="check" class="checkbtn">
-            <i class="fas fa-bars"></i>
-        </label>
-        <a href="index.html" class="enlace">
-            <img src="/img/logobairesint.png" class="logo" alt="logo">
-        </a>
-        <ul class="none">
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#sobrenosotros">Sobre Nosotros</a></li>
-            <li><a href="#contactanos">Contactanos</a></li>
-        </ul>
+    <nav class="navBar">
+        <div class="contenedorNav">
+            <a href="index.html" class="enlaceLogo">
+                <img src="/img/logobairesint.png" alt="logo">
+            </a>
+            <button class="cerrarMenu" aria-label="Cerrar menú">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <ul class="menu">
+                <button class="abrirMenu" aria-label="Abrir menú">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#sobrenosotros">Sobre Nosotros</a></li>
+                <li><a href="#contactanos">Contactanos</a></li>
+            </ul>
+        </div>
     </nav>
 <header id="index.html" class="inicio">
     <div class="container">
@@ -99,9 +103,12 @@
 <!-- QUIENES SOMOS -->
 <section id="sobrenosotros" class="about section container1">
     <article class="text-center text-lg-right mb-2">
-        <h2>SOBRE NOSOTROS</h2>
-        <p class="aboutus"> BairesINT es un proveedor argentino de servicios residenciales de banda ancha que ofrece servicios de banda ancha a través de cable módem. En 2011, la empresa lanzó un nuevo servicio de banda ancha con velocidades de hasta 30Mbps. El servicio se llama PLAN BASICO y está disponible en el Gran Buenos Aires. BairesINT fue fundado en 1997 y tiene su sede en Buenos Aires. En la actualidad, la empresa tiene casi 1,5 milllones de clientes y tiene operaciones en 65 ciudades del interior de Argentina y 10 provincias (Buenos Aires, Salta, Córdoba, Santa Fe, Entre Ríos, Corrientes, Chaco, Neuquén, Formosa y Misiones).</p>
-    </article>
+        <h2 class="aboutusTitle">SOBRE NOSOTROS</h2>
+        <p class="aboutus">BairesINT es un proveedor argentino de servicio de internet por fibra óptica. 
+            Fundado en 1997 para ofrecer una conexión de alta calidad a nuestros clientes.
+            En 2011, la empresa lanzó un nuevo servicio de fibra óptica con velocidades de hasta 500Mbps. 
+            Contamos con los planes más óptimos y económicos del mercado, contando con 1,5 milllones de clientes y registrando más operaciones en 65 ciudades del interior de Argentina y 10 provincias (Buenos Aires, Salta, Córdoba, Santa Fe, Entre Ríos, Corrientes, Chaco, Neuquén, Formosa y Misiones).
+            Nuestra sede, actualmente se encuentra en la provincia de Buenos Aires.</article>
     <article class="text-center mb-2">
         <iframe class="container" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3285.9800081561007!2d-58.437441285054184!3d-34.55406156237882!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb5b4bcbf9eff%3A0x8a68c704de60fd40!2sBuenos%20Aires%2C%20CABA!5e0!3m2!1ses-419!2sar!4v1666738515538!5m2!1ses-419!2sar" width="70%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </article>
@@ -147,7 +154,7 @@
                             d="M 16 3 C 8.8324839 3 3 8.8324839 3 16 L 3 34 C 3 41.167516 8.8324839 47 16 47 L 34 47 C 41.167516 47 47 41.167516 47 34 L 47 16 C 47 8.8324839 41.167516 3 34 3 L 16 3 z M 16 5 L 34 5 C 40.086484 5 45 9.9135161 45 16 L 45 34 C 45 40.086484 40.086484 45 34 45 L 16 45 C 9.9135161 45 5 40.086484 5 34 L 5 16 C 5 9.9135161 9.9135161 5 16 5 z M 37 11 A 2 2 0 0 0 35 13 A 2 2 0 0 0 37 15 A 2 2 0 0 0 39 13 A 2 2 0 0 0 37 11 z M 25 14 C 18.936712 14 14 18.936712 14 25 C 14 31.063288 18.936712 36 25 36 C 31.063288 36 36 31.063288 36 25 C 36 18.936712 31.063288 14 25 14 z M 25 16 C 29.982407 16 34 20.017593 34 25 C 34 29.982407 29.982407 34 25 34 C 20.017593 34 16 29.982407 16 25 C 16 20.017593 20.017593 16 25 16 z" />
                     </svg>
                 </a>
-                <a href="mailto:bairesinst@gmail.com" target="_blank">
+                <a href="mailto:bairesint@gmail.com" target="_blank">
                     <svg class="redes" fill="#000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 50 50"
                         width="50px" height="50px">
                         <path
@@ -164,7 +171,7 @@
             </div>
             <div class="contactoFotter">
                 <p class="cont">Telefono: 0800-222-5555</p>
-                <p class="cont">info@bairesinte.com</p>
+                <p class="cont">info@bairesint.com.ar</p>
                 <p class="cont">Creador por <a class="github" href="https://github.com/Brendaniela95/BairesInt.git"
                         target="_blank"> BAIRESINT </a></p>
             </div>
@@ -187,9 +194,9 @@
         </div>
     </div>
     </footer>
-
+    <script src="https://kit.fontawesome.com/59fa5dfbaa.js" crossorigin="anonymous"></script>
     <script src="js/contact_form.js"></script>
-    <script src="app.js"></script>
+    <script defer src="app.js"></script>
     <script src="clima.js"></script>
 </body>
 </html>
