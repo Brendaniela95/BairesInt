@@ -30,7 +30,7 @@ html {
 /* FORMULARIO */
 
 .fondo {
-    background-color: #efedef62;
+
     font-family: 'Montserrat-Light';
     font-weight: 400;
 }
@@ -314,4 +314,20 @@ align-items: center;
 margin: 10px;
 padding: 0;
 box-sizing: border-box;
+}
+
+/* TRABAJA CON NOSOTROS */
+.containerBAIRES {
+    width: 80%;
+    position: relative;
+
+}
+
+.trabajacon{
+    margin: 10px;
+    font-weight: bold;
+}
+
+h2{
+    font-weight: bold;
 }

@@ -27,7 +27,7 @@
 /* Fondo de nuestra web */
 
 body {
-    background-image: linear-gradient(to bottom, #717171, #7e7e8a, #868da4, #899dc0, #86aedb, #70bfee, #4dd1fa, #00e2ff, #00f2e5, #4afdb3, #a8ff76, #fefa3b);
+    background-image: linear-gradient(to bottom, #717171, #7e7e8a, #868da4, #899dc0, #86aedb, #70bfee, #86aedb, #899dc0, #868da4,  #7e7e8a, #717171, #717171);
 }
 
 /* Navegador */
@@ -60,7 +60,7 @@ body {
 
 .menu {
     float: right;
-    margin-right: 20px;
+    margin-right: 10px;
 }
 
 .menu li {
@@ -68,6 +68,7 @@ body {
     padding: 0 15px;
     list-style: none;
     display: inline-block;
+    padding: 0;
 }
 
 .menu li a {
